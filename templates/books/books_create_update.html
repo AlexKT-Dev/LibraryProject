@@ -18,8 +18,26 @@
                     {{ form.slug }}
                 </div>
             </div>
+            <div class="row mb-3">
+                <label for="id_slug" class="col-sm-2 col-form-label">User</label>
+                <div class="col-sm-10">
+                    {{ form.user }}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="id_slug" class="col-sm-2 col-form-label">Date & Time</label>
+                <div class="col-sm-10">
+                    {{ form.pub_date }}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="id_slug" class="col-sm-2 col-form-label">Is published</label>
+                <div class="col-sm-10">
+                    {{ form.is_pub }}
+                </div>
+            </div>
             <div class="d-flex justify-content-center mb-3">
                  <input type="submit" class="btn btn-primary" value="Confirm">
-             </div>
+            </div>
         </form>
     {% endblock %}

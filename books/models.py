@@ -5,14 +5,20 @@ from django.db.models.signals import (
 from django.dispatch import receiver
 from django.core.mail import send_mail, send_mass_mail
 from django.core.cache import cache
+from django.utils import timezone
 
 from .transliterator import my_slugify
 from .email import email_template
+
+from user.models import UserModel
 
 
 class BooksModel(models.Model):
     title = models.CharField('Title', max_length=150)
     slug = models.CharField('Slug', max_length=255, blank=True)
+    user = models.ForeignKey(UserModel, verbose_name='User', on_delete=models.CASCADE)
+    pub_date = models.DateTimeField('Date', blank=True, default=timezone.now)
+    is_pub = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
