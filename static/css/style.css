@@ -1,0 +1,38 @@
+p {
+    margin: 0;
+}
+
+.alert {
+    margin: 30px 20rem 0 20rem;
+}
+
+main {
+    margin: 30px;
+}
+
+.container-fluid {
+    margin: 0 30px;
+    --bs-gutter-x: 0;
+}
+
+.books-list .btn {
+    margin-left: 5px;
+}
+
+.upload-docs-card input[type='submit'] {
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 991px) {
+    .upload-docs-card {
+        margin-top: 20px;
+    }
+}
+
+.display-upload-docs {
+    margin: 15px 0 0 0px;
+    padding: 0;
+    max-height: 120px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
